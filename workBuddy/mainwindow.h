@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QTimer>
+#include <QLabel>
+#include "timermodel.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -13,9 +16,18 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
+    void displayTimer();
     ~MainWindow();
 
 private:
+       QLabel *timerLabel;
+       timerModel timerClass;
+       struct timerModel::TimerData timerData;
+       int seconds = 0;
+       int hours = 0;
+       int minutes = 0;
+       QTimer *timer;
     Ui::MainWindow *ui;
+
 };
 #endif // MAINWINDOW_H
