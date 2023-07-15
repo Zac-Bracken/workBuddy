@@ -11,13 +11,14 @@ CONFIG += c++17
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    timercontroller.cpp \
-    timermodel.cpp
+    timermodel.cpp \
+    widgets/tomatotimer.cpp
+
 
 HEADERS += \
     mainwindow.h \
-    timercontroller.h \
-    timermodel.h
+    timermodel.h \
+    tomatotimer.h
 
 FORMS += \
     mainwindow.ui
